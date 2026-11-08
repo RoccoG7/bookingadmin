@@ -1,0 +1,294 @@
+.listings-page {
+  display: flex;
+  min-width: 1024px;
+  min-height: 100svh;
+  color: #1a1b1c;
+  background: #fff;
+}
+
+.sidebar {
+  display: flex;
+  flex: 0 0 240px;
+  flex-direction: column;
+  min-height: 100svh;
+  padding: 24px 16px;
+  background: #fff;
+}
+
+.profile-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+}
+
+.profile-avatar {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  place-items: center;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f7b44a, #f88a2a);
+  border-radius: 50%;
+}
+
+.profile-summary strong,
+.profile-summary span {
+  display: block;
+}
+
+.profile-summary strong {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.profile-summary span {
+  color: #525252;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.sidebar-navigation {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+  padding: 16px;
+  color: #1a1b1c;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sidebar-link:hover:not(.sidebar-link--active) {
+  background: rgba(248, 138, 42, 0.07);
+}
+
+.sidebar-link--active {
+  color: #fff;
+  background: #f88a2a;
+}
+
+.sidebar-icon {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  flex: none;
+  place-items: center;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.notification-badge {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  place-items: center;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 400;
+  background: #ef4444;
+  border-radius: 50%;
+}
+
+.sidebar-logo {
+  width: 176px;
+  height: auto;
+  margin: auto auto 0;
+  object-fit: contain;
+}
+
+.listings-content {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+  background: rgba(251, 192, 40, 0.05);
+}
+
+.listings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.listings-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.17;
+}
+
+.create-listing {
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+  background: #f88a2a;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.create-listing:hover {
+  background: #e87b1c;
+}
+
+.listings-tabs {
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-bottom: 1px solid rgba(251, 192, 40, 0.3);
+}
+
+.listing-tab {
+  width: 160px;
+  padding: 10px;
+  color: #525252;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: nowrap;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.listing-tab--active {
+  color: #1a1b1c;
+  border-bottom-color: #1a1b1c;
+}
+
+.empty-listings {
+  display: grid;
+  flex: 1;
+  min-height: 500px;
+  place-items: center;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid rgba(251, 192, 40, 0.2);
+  border-radius: 16px;
+}
+
+.empty-listings-inner {
+  display: grid;
+  justify-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.empty-listings img {
+  width: 208px;
+  height: 192px;
+  object-fit: contain;
+}
+
+.empty-listings h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.17;
+}
+
+.empty-listings p {
+  margin: 0;
+  color: #525252;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.listings-notice {
+  min-height: 20px;
+  margin: -20px 0 0;
+  color: #525252;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .listings-page {
+    min-width: 0;
+  }
+
+  .sidebar {
+    flex-basis: 208px;
+    padding: 24px 8px;
+  }
+
+  .sidebar-link {
+    gap: 10px;
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .sidebar-logo {
+    width: 156px;
+  }
+
+  .listings-content {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 680px) {
+  .listings-page {
+    display: block;
+  }
+
+  .sidebar {
+    position: static;
+    min-height: 0;
+    padding: 16px;
+    border-bottom: 1px solid rgba(251, 192, 40, 0.2);
+  }
+
+  .sidebar-navigation {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+  }
+
+  .sidebar-link {
+    width: auto;
+    min-width: max-content;
+  }
+
+  .sidebar-logo {
+    display: none;
+  }
+
+  .listings-content {
+    gap: 24px;
+    padding: 20px 16px;
+  }
+
+  .listings-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .empty-listings {
+    min-height: 430px;
+  }
+}

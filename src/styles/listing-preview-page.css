@@ -1,0 +1,165 @@
+.preview-content {
+  min-width: 0;
+  flex: 1;
+  padding: 32px;
+  background: rgba(251, 192, 40, 0.05);
+}
+
+.preview-header,
+.preview-title-wrap,
+.preview-header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.preview-header {
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.preview-title-wrap { gap: 20px; }
+
+.preview-title-wrap h1 { margin: 0; font-size: 24px; font-weight: 700; line-height: 1.17; }
+
+.preview-header-actions { flex-wrap: wrap; justify-content: flex-end; gap: 12px; }
+
+.round-action {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  place-items: center;
+  color: #f88a2a;
+  background: #fff;
+  border: 1px solid #f88a2a;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.round-action svg { width: 20px; height: 20px; stroke-width: 1.5; }
+
+.archive-button,
+.moderation-button {
+  min-height: 40px;
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.archive-button { color: #f88a2a; background: #fff; border: 1px solid #f88a2a; }
+.moderation-button { color: #fff; background: #f88a2a; border: 1px solid #f88a2a; }
+
+.listing-preview-card {
+  display: grid;
+  grid-template-columns: minmax(300px, 384px) minmax(0, 1fr);
+  gap: 24px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid rgba(251, 192, 40, 0.2);
+  border-radius: 16px;
+}
+
+.preview-gallery-main,
+.preview-gallery-grid img,
+.more-photos { display: block; width: 100%; object-fit: cover; }
+
+.preview-gallery-main { height: 264px; border-radius: 16px; object-position: 50% 30%; }
+
+.preview-gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px; }
+
+.preview-gallery-grid img,
+.more-photos { aspect-ratio: 1; border-radius: 12px; object-position: 50% 35%; }
+.more-photos { display: grid; place-items: center; color: #fff; font-size: 16px; background: rgba(26, 27, 28, 0.6); }
+
+.preview-details { display: grid; align-content: start; gap: 24px; }
+.preview-details h2 { margin: 0 0 12px; font-size: 18px; font-weight: 700; line-height: 1.35; }
+.preview-details h3 { margin: 0 0 12px; font-size: 16px; font-weight: 700; line-height: 1.25; }
+
+.preview-meta { display: grid; gap: 6px; color: #525252; font-size: 14px; line-height: 1.4; }
+.preview-meta span { display: flex; align-items: center; gap: 8px; }
+.preview-meta svg { width: 16px; height: 16px; color: #f88a2a; stroke-width: 1.5; }
+
+.preview-description { margin: 12px 0 0; font-size: 14px; line-height: 1.4; }
+.preview-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.preview-tag { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; color: #f88a2a; font-size: 14px; line-height: 1.4; border: 1px solid #f88a2a; border-radius: 30px; }
+.preview-tag svg { width: 16px; height: 16px; stroke-width: 1.5; }
+
+.rules-summary { display: flex; flex-wrap: wrap; gap: 12px; }
+.rules-summary > div { display: grid; gap: 4px; min-width: 140px; padding: 12px; background: rgba(251, 192, 40, 0.05); border: 1px solid rgba(251, 192, 40, 0.2); border-radius: 8px; }
+.rules-summary span { color: #525252; font-size: 14px; line-height: 1.4; }
+.rules-summary b { font-size: 14px; line-height: 1.4; }
+
+.instructions-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.instructions-grid ol { display: grid; gap: 8px; padding-left: 18px; margin: 0; font-size: 14px; line-height: 1.4; }
+
+.preview-prices { display: grid; grid-template-columns: repeat(2, minmax(250px, 1fr)); gap: 12px; }
+.preview-price-card { display: grid; gap: 6px; padding: 12px; background: rgba(251, 192, 40, 0.05); border: 1px solid rgba(251, 192, 40, 0.2); border-radius: 8px; }
+.preview-price-card > span { color: #525252; font-size: 14px; line-height: 1.4; }
+.preview-price-card p { display: flex; justify-content: space-between; gap: 12px; margin: 0; font-size: 14px; line-height: 1.4; }
+
+.preview-notice { min-height: 20px; margin: 12px 0 0; color: #525252; font-size: 12px; line-height: 1.5; text-align: center; }
+
+.moderation-dialog-backdrop {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(26, 27, 28, 0.7);
+}
+
+.moderation-dialog {
+  display: grid;
+  width: min(100%, 384px);
+  gap: 40px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 8px -4px rgba(16, 24, 40, 0.03), 0 20px 24px -4px rgba(16, 24, 40, 0.08);
+}
+
+.moderation-dialog-content { display: grid; gap: 16px; }
+.moderation-dialog-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.moderation-dialog h2 { margin: 0; color: #1a1b1c; font-size: 24px; font-weight: 700; line-height: 1.17; }
+.moderation-dialog p { margin: 0; color: #1a1b1c; font-size: 16px; line-height: 1.5; }
+
+.moderation-dialog-close {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  margin: -8px -8px 0 0;
+  padding: 0;
+  place-items: center;
+  color: #1a1b1c;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.moderation-dialog-close:hover { background: rgba(248, 138, 42, 0.08); }
+.moderation-dialog-close svg { width: 20px; height: 20px; stroke-width: 1.67; }
+
+.moderation-dialog-confirm {
+  width: 100%;
+  min-height: 68px;
+  padding: 20px 24px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: #f88a2a;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.moderation-dialog-confirm:hover { background: #e87b1c; }
+
+@media (max-width: 1023px) { .preview-content { padding: 24px; } .listing-preview-card { grid-template-columns: 300px minmax(0, 1fr); padding: 20px; } }
+@media (max-width: 850px) { .listing-preview-card { grid-template-columns: 1fr; } .preview-gallery { max-width: 500px; } }
+@media (max-width: 680px) { .preview-content { padding: 20px 16px; } .preview-header { align-items: flex-start; flex-direction: column; } .preview-header-actions { justify-content: flex-start; } .listing-preview-card { padding: 16px; } .instructions-grid, .preview-prices { grid-template-columns: 1fr; } .archive-button, .moderation-button { padding: 10px 14px; } }
